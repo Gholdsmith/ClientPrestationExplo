@@ -28,7 +28,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "./node_modules/bootstrap/dist/css/bootstrap.css"
+              }
             ],
             "scripts": []
           },
@@ -124,6 +127,42 @@
           }
         }
       }
-    }},
+    },
+    "grafik": {
+      "projectType": "library",
+      "root": "projects/grafik",
+      "sourceRoot": "projects/grafik/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/grafik/tsconfig.lib.json",
+            "project": "projects/grafik/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/grafik/src/test.ts",
+            "tsConfig": "projects/grafik/tsconfig.spec.json",
+            "karmaConfig": "projects/grafik/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/grafik/tsconfig.lib.json",
+              "projects/grafik/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "my-app"
 }
