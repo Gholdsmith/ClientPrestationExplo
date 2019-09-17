@@ -32,7 +32,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false, // <-- debugging purposes only
-        preloadingStrategy: PreloadAllModules // précharge n tache de fond les module en lazyloading
+        preloadingStrategy: PreloadAllModules // précharge en tache de fond les modules en lazyloading
       }
     )
     // other imports here
@@ -44,7 +44,7 @@ export class AppRoutingModule {
     // Use a custom replacer to display function names in the route configs
     const replacer = (key, value) => (typeof value === 'function') ? value.name : value;
 
-    // Permet de voir l'ensemble des appels à la création des routes
+    // Permet de voir l'ensemble des appels à la création des routes dans la console
     console.log('Routes: ', JSON.stringify(router.config, replacer, 2));
   }
 
