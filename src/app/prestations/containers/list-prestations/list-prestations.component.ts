@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrestationsService } from '../../services/prestations.service';
 import { Prestation } from 'src/shared/models/prestation.model';
+import { State } from 'src/shared/enums/state.enum';
 
 @Component({
   selector: 'app-list-prestations',
@@ -28,6 +29,11 @@ export class ListPrestationsComponent implements OnInit {
       'total TTC',
       'state',
     ];
+  }
+
+  changeState(obj: {'item': Prestation, 'state': State}){
+    // console.log(obj);
+    this.prestationsService.update(obj.item, obj.state);
   }
 
 }

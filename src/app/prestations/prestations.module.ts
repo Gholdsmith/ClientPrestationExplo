@@ -4,11 +4,12 @@ import { PagePrestationsComponent } from './pages/page-prestations/page-prestati
 import { PrestationsRoutingModule } from './prestations-routing.module';
 import { ListPrestationsComponent } from './containers/list-prestations/list-prestations.component';
 import { SharedModule } from 'src/shared/shared.module';
+import { ItemPrestationComponent } from './components/item-prestation/item-prestation.component';
 
 
 
 @NgModule({
-  declarations: [PagePrestationsComponent, ListPrestationsComponent],
+  declarations: [PagePrestationsComponent, ListPrestationsComponent, ItemPrestationComponent],
   imports: [
     CommonModule,
     PrestationsRoutingModule,
