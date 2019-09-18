@@ -32,9 +32,9 @@ set collection(col: Prestation[]) {
 
   // update item in collection
 public update(item: Prestation, state: State) {
-  console.log(item);
+  // console.log(item);
   item.state = state;
-  console.log(item);
+  // console.log(item);
 }
   // set item by from collection
 

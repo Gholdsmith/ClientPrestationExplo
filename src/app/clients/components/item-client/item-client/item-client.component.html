@@ -1,0 +1,10 @@
+<tr>
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.state}}</td>
+    <td [appState]="item.state">
+        <select (change)="changeState($event)">
+          <option *ngFor="let state of states | keyvalue" [value]="state.value" [selected]="item.state === state.value">{{ state.value }}</option>
+        </select>
+      </td>
+  </tr>

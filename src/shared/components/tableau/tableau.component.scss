@@ -1,0 +1,21 @@
+@import 'theme';
+
+#tableau-light {
+  .state-annule, .state-inactif {
+   background: $color1;
+  }
+  .state-option {
+   background: lighten($color1, 30);
+  }
+  .state-confirme, .state-actif {
+   background: $color2;
+  }
+
+  tbody>* { // pour cibler n'importe quel élément de tBody qui est directemetn enfant de tboddy
+
+    display: contents;
+    // dit au navigateur que cet élément n'existe pas.
+    // que cet élément n'est pas dans le DOM
+  }
+
+}
