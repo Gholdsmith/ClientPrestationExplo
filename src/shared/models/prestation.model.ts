@@ -20,8 +20,8 @@ export class Prestation implements PrestationI {
   totalHt(): number {
     return this.nbJours * this.tjmHt;
   }
-  totalTtc(tva?): number {
-   if (tva <= 0) {
+  totalTtc(tva?: number): number {
+   if (tva) {
      if (tva <= 0) {
        return this.totalHt();
      }
