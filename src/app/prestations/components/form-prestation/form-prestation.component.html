@@ -1,0 +1,47 @@
+<div class="container">
+  <!--{{init|json}}-->
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="type">Type prestation</label>
+      <input formControlName="typePresta" type="text" class="form-control" id="type">
+    </div>
+
+    <div class="form-group">
+      <label for="client">client</label>
+      <input formControlName="client" type="text" class="form-control" id="client">
+    </div>
+
+    <div class="form-group">
+      <label for="nbjour">nbjour</label>
+      <input formControlName="nbJours" type="number" class="form-control" id="nbjour">
+    </div>
+
+    <div class="form-group">
+      <label for="tjmht">tjmht</label>
+      <input formControlName="tjmHt" type="number" class="form-control" id="tjmht">
+    </div>
+
+    <div class="form-group">
+      <label for="tva">tva</label>
+      <input formControlName="tauxTva" type="number" class="form-control" id="tva">
+    </div>
+
+    <div class="form-group">
+      <label for="state">state</label>
+      <select formControlName="state" type="number" class="form-control" id="state">
+        <option *ngFor="let state of (states | keyvalue)" [value]="state.value">{{state.value}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">comment</label>
+      <textarea formControlName="comment" type="number" class="form-control"
+        id="comment">{{ form.get('comment').value }}</textarea>
+        <!-- on utlise cette forme car on nepeut pas récupérer directement la value sur un textarea -->
+    </div>
+
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+
+</div>

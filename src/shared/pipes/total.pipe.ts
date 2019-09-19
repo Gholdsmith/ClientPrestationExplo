@@ -6,7 +6,7 @@ import { Prestation } from '../models/prestation.model';
 })
 export class TotalPipe implements PipeTransform {
 
-  transform(value: Prestation, args: number): any {
+  transform(value: Prestation, args?: number): any {
 
     if (value) {
       if (args) {

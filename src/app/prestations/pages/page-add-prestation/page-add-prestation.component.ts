@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-add-prestation.component.scss']
 })
 export class PageAddPrestationComponent implements OnInit {
-
+  public title = 'Prestations';
+  public txt = 'Ajouter une prestation';
   constructor() { }
 
   ngOnInit() {
