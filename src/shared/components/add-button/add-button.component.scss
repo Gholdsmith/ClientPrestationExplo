@@ -1,0 +1,25 @@
+@import 'theme';
+
+// Cible l'élément host de la balise button app-add-button
+:host {
+ margin-left: 10px;
+}
+
+
+button {
+ color: $light-color;
+ border: none;
+ padding: .5rem 1rem;
+}
+
+// on cible la balise button à l'intérieur d'un contexte en l'occurence "app-template-a"
+// Fonctionne uniquement quand on garde le shadowDOm
+:host-context(app-template-a) button {
+ background: $color1;
+}
+
+// on cible la balise button à l'intérieur d'un contexte en l'occurence "app-template-b"
+// Fonctionne uniquement quand on garde le shadowDOm
+:host-context(app-template-b) button {
+ background: $color2;
+}

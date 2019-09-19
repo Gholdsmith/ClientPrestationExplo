@@ -5,15 +5,18 @@ import { PrestationsRoutingModule } from './prestations-routing.module';
 import { ListPrestationsComponent } from './containers/list-prestations/list-prestations.component';
 import { SharedModule } from 'src/shared/shared.module';
 import { ItemPrestationComponent } from './components/item-prestation/item-prestation.component';
+import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add-prestation.component';
+import { TemplatesModule } from '../template/templates.module';
 
 
 
 @NgModule({
-  declarations: [PagePrestationsComponent, ListPrestationsComponent, ItemPrestationComponent],
+  declarations: [PagePrestationsComponent, ListPrestationsComponent, ItemPrestationComponent, PageAddPrestationComponent],
   imports: [
     CommonModule,
     PrestationsRoutingModule,
-    SharedModule
+    SharedModule,
+    TemplatesModule
   ]
 })
 export class PrestationsModule { }
