@@ -7,7 +7,7 @@ const appRoutes: Routes = [
   {
     path: '',
     component: PageClientsComponent,
-    data: { title: 'Prestations', txt: 'Toutes les prestations', intitule: 'prestation' }
+    data: { title: 'Clients', txt: 'Tous les clients', intitule: 'client' }
   },
   { path: 'add', component: PageAddClientComponent },
 

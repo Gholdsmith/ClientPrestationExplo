@@ -34,7 +34,7 @@ export class ListPrestationsComponent implements OnInit, OnDestroy {
     ];
   }
 
-  changeState(obj: {'item': Prestation, 'state': State}){
+  changeState(obj: {'item': Prestation, 'state': State}) {
     // console.log(obj);
     this.prestationsService.update(obj.item, obj.state);
   }
