@@ -1,3 +1,6 @@
 <app-tableau [headers]="headers">
-  <app-item-prestation *ngFor="let obj of collection" [item]="obj" (nItem)="changeState($event)"></app-item-prestation>
+  <app-item-prestation *ngFor="let obj of (collection$ | async)" [item]="obj" (nItem)="changeState($event)">
+    <!-- le pipe async permet de souscrire à l'observable collection et donc on peut utiliser
+    le change Detection puisque la souscription à l'observable est faite dans le HTML -->
+  </app-item-prestation>
 </app-tableau>

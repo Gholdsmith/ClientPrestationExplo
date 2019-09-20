@@ -19,7 +19,13 @@ export class AddPrestationComponent implements OnInit {
   }
 
   submited(item: Prestation) {
-    this.prestationService.add(item);
-    this.router.navigate(['../'], {relativeTo: this.route});
+    this.prestationService.add(item).then(() => {
+      this.router.navigate(['../'], { relativeTo: this.route });
+    });
+
+    // *** équivalencet HttpClient
+    //   this.prestationService.add(item).subscribe((res) =>) {
+    //     this.router.navigate(['../'], { relativeTo: this.route });
+    //   }
   }
 }

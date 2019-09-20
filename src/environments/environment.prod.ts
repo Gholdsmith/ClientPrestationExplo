@@ -8,5 +8,6 @@ export const environment = {
     storageBucket: 'frmagrrs2i.appspot.com',
     messagingSenderId: '915956023693',
     appId: '1:915956023693:web:9368e2897efe2e34dfbdc4'
-  }
+  },
+  urlApi: 'https://www.monapiprod.com/'
 };
