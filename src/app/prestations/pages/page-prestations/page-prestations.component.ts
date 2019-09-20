@@ -10,6 +10,7 @@ export class PagePrestationsComponent implements OnInit {
   public title: string;
   public intitule: string;
   public txt: string;
+  public id: string;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -19,6 +20,7 @@ export class PagePrestationsComponent implements OnInit {
       this.title = data.title;
       this.txt = data.txt;
       this.intitule = data.intitule;
+
     });
   }
 

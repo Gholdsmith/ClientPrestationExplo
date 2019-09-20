@@ -31,7 +31,7 @@ export class ListClientsComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeState(obj: {'item': Client, 'state': StateClient}){
+  changeState(obj: {'item': Client, 'state': StateClient}) {
     // console.log(obj);
     this.clientService.update(obj.item, obj.state).then(() => {
       obj.item.state = obj.state;

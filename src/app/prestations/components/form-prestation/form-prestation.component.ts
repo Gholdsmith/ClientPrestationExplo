@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { State } from 'src/shared/enums/state.enum';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Prestation } from 'src/shared/models/prestation.model';
@@ -13,7 +13,7 @@ export class FormPrestationComponent implements OnInit {
   @Output() nItem: EventEmitter<Prestation> = new EventEmitter();
   public states = State;
   public form: FormGroup;
-  private init = new Prestation();
+  @Input() init = new Prestation();
 
   constructor(private fb: FormBuilder) { }
 
@@ -24,7 +24,7 @@ export class FormPrestationComponent implements OnInit {
   private generateForm() {
     this.form = this.fb.group({
       typePresta: [this.init.typePresta, Validators.required],
-      // rendds le champ obligatoire et de taille 3
+      // rends le champ obligatoire et de taille 3
       client: [this.init.client, Validators.compose([Validators.required, Validators.minLength(3)])],
       nbJours: [this.init.nbJours],
       tjmHt: [this.init.tjmHt],

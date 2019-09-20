@@ -1,8 +1,8 @@
 
 Todo:
-  ☐ bug sur bandeau prestations/clients
-  farerzer
-  reree
-  ✔ lmlmlm @started(19-09-20 09:29) @done(19-09-20 09:29) @lasted(53s)
-  ☐ ùùù
-
+  ☐ creer page-edit-prestation component
+  ☐ creer un container edit-prestation component qui va s'afficher sur la page
+  ☐ sur cette page on affiche form-prestation
+  ☐ sur page-prestation-component.ts on récupère l'id dans ActivatedRoute
+  ☐ ensuite on appele this.prestationsService.getPrestation(id)
+  ☐ return un observable auquel on souscrit dans le html pour passer le flux via un Input au component enfant edit-prestation component
